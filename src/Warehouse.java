@@ -1,7 +1,7 @@
 public class Warehouse {
     private final int SIZE = 10;
     private Cell[][][] grid = new Cell[SIZE][SIZE][SIZE];
-    private Position exitPosition = new Position(0, 0, 0); // выход в (0,0,0)
+    private Position exitPosition = new Position(0, 0, 0);
 
     public Warehouse() {
         for (int x = 0; x < SIZE; x++) {

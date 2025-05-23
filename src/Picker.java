@@ -20,7 +20,6 @@ public class Picker {
                         for (Item item : cell.getItems()) {
                             if (item.getId().equals(itemId)) {
                                 neededCells.add(cell);
-                                cell.removeItemById(itemId);
                                 break outer;
                             }
                         }

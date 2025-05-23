@@ -24,7 +24,6 @@ public class PlacementEngine {
                         if (cell.isAvailable(item)) {
                             cell.addItem(item);
                             placed = true;
-                            System.out.println(x + " " + y + " " + z);
                             break outer;
                         }
                     }

@@ -22,16 +22,18 @@ public class Simulator {
         for (Order order : orders) {
             totalTime += picker.collectOrder(order);
         }
+        for (int x = 0; x < 10; x++) {
+            for (int y = 0; y < 10; y++) {
+                for (int z = 0; z < 10; z++) {
+                    System.out.println(warehouse.getCell(x,y,z).toString());
+                }
+            }
+        }
 
         System.out.println("📦 Обработано заказов: " + orders.size());
-        System.out.println("⏱ Общее время сбора: " + totalTime + " сек");
-        System.out.println("⏱ Среднее время на заказ: " + (totalTime / orders.size()) + " сек");
-        System.out.println(warehouse.getCell(0,0,1).toString());
+        System.out.printf("⏱ Общее время сбора: %,.7f сек\n", totalTime);
+        System.out.printf("⏱ Среднее время на заказ: %,.7f сек\n",(totalTime / orders.size()));
 
-        Warehouse warehouse1 = new Warehouse();
-        engine = new PlacementEngine(warehouse1);
-        picker = new Picker(warehouse1);
 
-        engine.greedyPlacement(items);
     }
 }

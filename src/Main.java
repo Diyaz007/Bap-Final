@@ -7,13 +7,13 @@ public class Main {
 
         List<Item> items = new ArrayList<>();
         Random random = new Random();
-        for (int i = 1; i <= 1800; i++) {
+        for (int i = 1; i <= 1500; i++) {
             Item.Size size = switch (random.nextInt(3)) {
                 case 0 -> Item.Size.SMALL;
                 case 1 -> Item.Size.MEDIUM;
                 default -> Item.Size.LARGE;
             };
-            int freq = 1 + random.nextInt(100);
+            int freq = 1 + random.nextInt(10);
             items.add(new Item("item" + i, size, freq));
         }
 
